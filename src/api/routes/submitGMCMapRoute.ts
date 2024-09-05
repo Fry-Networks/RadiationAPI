@@ -89,6 +89,9 @@ router.post('/api/submitGmcMap', async (req: express.Request, res: express.Respo
       paramID,
       minerKey,
       data: data,
+      metadata: {
+        data_type: "gmcMap",
+      }
     });
 
     await scrapedData.save();
